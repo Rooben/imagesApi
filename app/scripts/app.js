@@ -9,4 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('ibmApp', []);
+  .module('ibmApp', [
+    'ui.router',
+    'stacked'
+  ]);

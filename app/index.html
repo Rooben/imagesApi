@@ -21,7 +21,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header">  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Header Start ++++++++ -->
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -33,30 +33,32 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">ibm</a>
+            <a class="navbar-brand" href="#/">Flickr-Connect</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li class="active"><a href="#/">Stacked Display</a></li>
+              <li><a ng-href="#/">Grid Display</a></li>
+              <li><a ng-href="#/">Carousel Display</a></li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </div>  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Header End ++++++++ -->
 
-    <div class="container">
-    <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-    </div>
-
-    <div class="footer">
+    <div class="main-content-display-area"> <!-- ++++++++++++++++++++++++++++++++ Main Content Display Sart ++++++++ -->
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <div ui-view></div>
       </div>
-    </div>
+    </div> <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Main Content Display End ++++++++ -->
+
+    <div class="footer"> <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Footer Start ++++++++ -->
+      <div class="container">
+       <p class="footerText"><span class="glyphicon glyphicon-registration-mark"></span> Copyright  ObenIT App Inc.</p>
+      </div>
+    </div> <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Footer End ++++++++ -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -75,12 +77,13 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/stacked.js"></script>
         <!-- endbuild -->
 </body>
 </html>
