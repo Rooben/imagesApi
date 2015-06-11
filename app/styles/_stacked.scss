@@ -1,32 +1,82 @@
-.stacked-page{
-  .allImages{
+.stacked-page {
+
+  .allImages {
     max-width: 1000px;
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;
+    .col-md-col8, .col-md-4, .col-md-12, .row, .imageItSelfContainer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .row{
+      margin:0;
+    }
+
+    .pagination{
+      margin: 9px 0 5px 0;
+    }
+    .filterBlock{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .col-sm-4{
+        position: relative;
+        min-height: 1px;
+        padding-right: 1px;
+        padding-left: 1px;
+      }
+    }
   }
-  .imageContainer{
+  .itemContainer {
     border: solid 2px #bacc5b;
     border-radius: 4px;
-    overflow: hidden;
+    width: 100%;
   }
-  .imagesDescriptions{
+  .imagesDescriptions {
     font-family: Marmelad, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    float: left;
-    li{
-      list-style-type: circle;
+    .span1 {
+      font-size: 2em;
     }
-    .span1{
-      font-size: 25px;
+    .span2 {
+      font-size: 1.5em;
     }
-    .span2{
-      font-size: 20px;
+    .span3 {
+      font-size: 0.9em;
     }
-    .span3{
-      font-size: 12px;
+    .key{
+      width: 30%;
+    }
+    .val{
+      width: 70%;
+      overflow: hidden;
+    }
+    .descContainer{
+      padding-left: 5px;
     }
   }
-  .imageItSelf{
-    float: left;
+  .imageItSelfContainer {
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+    .imageItSelf {
+      width: 100%;
+      border-radius: 4px 0 0 4px;
+    }
   }
+
+  .pagingControl {
+    background-color: #5f7a81;
+    border: solid 2px #bacc5b;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .pagingControl small {
+    color: #99c;
+  }
+
 }
+
+
+
+

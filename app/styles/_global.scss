@@ -16,7 +16,7 @@ body {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
-
+  background-color: #EFEBEB;
 }
 
 .footerText{
@@ -67,7 +67,15 @@ html {
   margin-bottom: 0;
 }
 
-
+.appNgView{
+  width: 100%;
+}
+.spinnerContainer{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 1000;
+}
 
 
 
@@ -88,14 +96,14 @@ html {
   }
 
   .header{
-    height: 5%;
+    /* height: 5%; */
   }
   .footer{
-    height: 5%
+    /* height: 5% */
   }
 
   .main-content-display-area{
-    height: 90%;
+    /* height: 90%; */
   }
 
 

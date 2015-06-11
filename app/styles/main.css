@@ -8,6 +8,10 @@ body {
   padding: 0; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  background-color: #EFEBEB; }
+
 .footerText {
   width: 190px;
   margin: 0 auto; }
@@ -45,6 +49,15 @@ html {
   border: none;
   margin-bottom: 0; }
 
+.appNgView {
+  width: 100%; }
+
+.spinnerContainer {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 1000; }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
@@ -58,13 +71,13 @@ html {
     margin: 0 auto; }
 
   .header {
-    height: 5%; }
+    /* height: 5%; */ }
 
   .footer {
-    height: 5%; }
+    /* height: 5% */ }
 
   .main-content-display-area {
-    height: 90%; }
+    /* height: 90%; */ }
 
   ul.navbar-nav {
     float: none;
@@ -91,24 +104,55 @@ html {
 .stacked-page .allImages {
   max-width: 1000px;
   width: 80%;
-  margin: 0 auto;
-  overflow: hidden; }
-.stacked-page .imageContainer {
+  margin: 0 auto; }
+  .stacked-page .allImages .col-md-col8, .stacked-page .allImages .col-md-4, .stacked-page .allImages .col-md-12, .stacked-page .allImages .row, .stacked-page .allImages .imageItSelfContainer {
+    padding-left: 0;
+    padding-right: 0; }
+  .stacked-page .allImages .row {
+    margin: 0; }
+  .stacked-page .allImages .pagination {
+    margin: 9px 0 5px 0; }
+  .stacked-page .allImages .filterBlock {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .stacked-page .allImages .filterBlock .col-sm-4 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 1px;
+      padding-left: 1px; }
+.stacked-page .itemContainer {
   border: solid 2px #bacc5b;
   border-radius: 4px;
-  overflow: hidden; }
+  width: 100%; }
 .stacked-page .imagesDescriptions {
-  font-family: Marmelad, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  float: left; }
-  .stacked-page .imagesDescriptions li {
-    list-style-type: circle; }
+  font-family: Marmelad, "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .stacked-page .imagesDescriptions .span1 {
-    font-size: 25px; }
+    font-size: 2em; }
   .stacked-page .imagesDescriptions .span2 {
-    font-size: 20px; }
+    font-size: 1.5em; }
   .stacked-page .imagesDescriptions .span3 {
-    font-size: 12px; }
-.stacked-page .imageItSelf {
-  float: left; }
+    font-size: 0.9em; }
+  .stacked-page .imagesDescriptions .key {
+    width: 30%; }
+  .stacked-page .imagesDescriptions .val {
+    width: 70%;
+    overflow: hidden; }
+  .stacked-page .imagesDescriptions .descContainer {
+    padding-left: 5px; }
+.stacked-page .imageItSelfContainer {
+  border-radius: 4px 0 0 4px;
+  width: 100%; }
+  .stacked-page .imageItSelfContainer .imageItSelf {
+    width: 100%;
+    border-radius: 4px 0 0 4px; }
+.stacked-page .pagingControl {
+  background-color: #5f7a81;
+  border: solid 2px #bacc5b;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+.stacked-page .pagingControl small {
+  color: #99c; }
 
 /*# sourceMappingURL=main.css.map */
