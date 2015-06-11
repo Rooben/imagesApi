@@ -24,14 +24,10 @@ angular.module('stacked', ['angularUtils.directives.dirPagination'])
   .constant('APIKEY', 'a5e95177da353f58113fd60296e1d250')
   .constant('USER_ID', '132365033@N08')
 
-  .controller('StackedCtrl', ['$scope', '$http', 'APIKEY', 'USER_ID', function ($scope, $http, secredKey, USER_ID) {
-    $http({
-      url: 'https://api.flickr.com/services/rest',
-      method: 'GET',
-      params: {method: 'flickr.people.getPublicPhotos', api_key: secredKey, user_id: USER_ID, format: 'json', nojsoncallback:1}
-    }).success(function(data){
+
+  .controller('StackedCtrl', ['$scope', 'flickr_API', function ($scope, flickr_API) {
+    flickr_API.success(function(data){
       var details = data.photos.photo;
-      console.log(details);
       $scope.flickArray = details;
     }).error(function(error){
       console.log(error);
@@ -39,14 +35,4 @@ angular.module('stacked', ['angularUtils.directives.dirPagination'])
 
     $scope.currentPage = 1;
     $scope.pageSize = 2;
-
-  }])
-  .filter('textModifier', function(){
-    return function(inputString){
-      if(typeof inputString !== 'string'){
-        return inputString;
-      }else{
-         return inputString.toUpperCase().replace(/_|-/gi, ' ');
-      }
-    }
-  });
+  }]);
