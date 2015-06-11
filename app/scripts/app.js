@@ -14,7 +14,7 @@ angular
     'stacked'
   ])
   .run(function(){
-    $('document').ready(function(){
+    angular.element(document).ready(function(){
       $('.spinnerContainer').hide();
     });
   });

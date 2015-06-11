@@ -41,8 +41,12 @@ angular.module('stacked', ['angularUtils.directives.dirPagination'])
     $scope.pageSize = 2;
 
   }])
-  .filter('textmodifier', function(){
-    return function(targetedString){
-
+  .filter('textModifier', function(){
+    return function(inputString){
+      if(typeof inputString !== 'string'){
+        return inputString;
+      }else{
+         return inputString.toUpperCase().replace(/_|-/gi, ' ');
+      }
     }
   });

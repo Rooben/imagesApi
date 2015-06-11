@@ -26,13 +26,13 @@
 
       <div dir-paginate="indx in flickArray| filter:q | itemsPerPage: pageSize" current-page="currentPage" class="itemContainer row">
         <div class="col-md-12">
-          <div class="imageItSelfContainer col-md-8">
+          <div class="imageItSelfContainer">
             <img class="imageItSelf" src="https://farm{{indx.farm}}.staticflickr.com/{{indx.server}}/{{indx.id}}_{{indx.secret}}.jpg" alt="IBM flickr image" title="IBM {{indx.id}}"/>
           </div>
-          <div class="imagesDescriptions col-md-4">
-            <div class="descContainer"><span class="span1 key">Title :</span> <span class="span1 val">{{indx.title}}</span></div>
-            <div class="descContainer"><span class="span2 key">Owner :</span> <span class="span2 val"> {{indx.owner}}</span></div>
-            <div class="descContainer"><span class="span3 key">Identity : </span> <span class="span3 val">{{indx.id}}</span></div>
+          <div class="imagesDescriptions">
+            <div class="descContainer"><span class="span1">Title :</span> <span class="span1">{{indx.title | textModifier}}</span></div>
+            <div class="descContainer"><span class="span2">Owner :</span> <span class="span2"> {{indx.owner}}</span></div>
+            <div class="descContainer"><span class="span3">Identity : </span> <span class="span3">{{indx.id}}</span></div>
           </div>
         </div>
       </div>

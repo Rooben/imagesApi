@@ -55,7 +55,7 @@ html {
 .spinnerContainer {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 40%;
   z-index: 1000; }
 
 /* Responsive: Portrait tablets and up */
@@ -132,11 +132,6 @@ html {
     font-size: 1.5em; }
   .stacked-page .imagesDescriptions .span3 {
     font-size: 0.9em; }
-  .stacked-page .imagesDescriptions .key {
-    width: 30%; }
-  .stacked-page .imagesDescriptions .val {
-    width: 70%;
-    overflow: hidden; }
   .stacked-page .imagesDescriptions .descContainer {
     padding-left: 5px; }
 .stacked-page .imageItSelfContainer {
