@@ -1,0 +1,19 @@
+<div class="stacked-page">
+    <h3 class="welcomeHeader">Flickr Images Display</h3>
+
+    <div class="allImages">
+      <div ng-repeat="indx in flickArray" class="imageContainer">
+            <img src="https://farm{{indx.farm}}.staticflickr.com/{{indx.server}}/{{indx.id}}_{{indx.secret}}.jpg"/>
+            <ul class="imagesDescriptions">
+              <li><span>Title : {{indx.title}}</span></li>
+              <li><span>Owner : {{indx.owner}}</span></li>
+              <li><span>Identity : {{indx.id}}</span></li>
+            </ul>
+            <span>**********************************************************************************************************</span>
+      </div>
+    </div>
+
+</div>
+
+
+
