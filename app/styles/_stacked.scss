@@ -1,6 +1,32 @@
 .stacked-page{
   .allImages{
-    width: 1000px;
+    max-width: 1000px;
+    width: 80%;
     margin: 0 auto;
+    overflow: hidden;
+  }
+  .imageContainer{
+    border: solid 2px #bacc5b;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .imagesDescriptions{
+    font-family: Marmelad, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    float: left;
+    li{
+      list-style-type: circle;
+    }
+    .span1{
+      font-size: 25px;
+    }
+    .span2{
+      font-size: 20px;
+    }
+    .span3{
+      font-size: 12px;
+    }
+  }
+  .imageItSelf{
+    float: left;
   }
 }
