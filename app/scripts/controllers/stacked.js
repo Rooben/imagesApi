@@ -7,7 +7,7 @@
  * # StackedCtrl
  * Controller of the ibmApp
  */
-angular.module('stacked', [])
+angular.module('stacked', ['angularUtils.directives.dirPagination'])
   .config(function($stateProvider) {
   $stateProvider
     // STACKED STATE  ===============================
@@ -32,12 +32,17 @@ angular.module('stacked', [])
     }).success(function(data){
       var details = data.photos.photo;
       console.log(details);
-      //for(var i=0; i<data.length){
-      //
-      //}
       $scope.flickArray = details;
     }).error(function(error){
       console.log(error);
     });
 
-  }]);
+    $scope.currentPage = 1;
+    $scope.pageSize = 2;
+
+  }])
+  .filter('textmodifier', function(){
+    return function(targetedString){
+
+    }
+  });

@@ -1,15 +1,50 @@
 <div class="stacked-page">
 
     <div class="allImages">
-      <h3 class="welcomeHeader">Flickr Images Display</h3>
-      <div ng-repeat="indx in flickArray" class="imageContainer">
-            <img class="imageItSelf" src="https://farm{{indx.farm}}.staticflickr.com/{{indx.server}}/{{indx.id}}_{{indx.secret}}.jpg" alt="IBM flickr image" title="IBM {{indx.id}}"/>
-            <ul class="imagesDescriptions">
-              <li><span class="span1">Title : {{indx.title}}</span></li>
-              <li><span class="span2">Owner : {{indx.owner}}</span></li>
-              <li><span class="span3">Identity : {{indx.id}}</span></li>
-            </ul>
+      <!--<h3 class="welcomeHeader">Flickr Images Display</h3>-->
+
+      <div class="row filterBlock">
+        <div class="col-sm-4">
+          <h3>Page : {{ currentPage }} </h3>
+        </div>
+        <div class="col-sm-4">
+          <label for="search">Search:</label>
+          <input ng-model="q" id="search" class="form-control" placeholder="Filter text">
+        </div>
+        <div class="col-sm-4">
+          <label for="search">Images per page:</label>
+          <input type="number" min="1" max="100" class="form-control" ng-model="pageSize">
+        </div>
       </div>
+
+
+      <div class="pagingControl">
+        <div class="text-center">
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/paginationControlPanel.html"></dir-pagination-controls>
+        </div>
+      </div>
+
+      <div dir-paginate="indx in flickArray| filter:q | itemsPerPage: pageSize" current-page="currentPage" class="itemContainer row">
+        <div class="col-md-12">
+          <div class="imageItSelfContainer col-md-8">
+            <img class="imageItSelf" src="https://farm{{indx.farm}}.staticflickr.com/{{indx.server}}/{{indx.id}}_{{indx.secret}}.jpg" alt="IBM flickr image" title="IBM {{indx.id}}"/>
+          </div>
+          <div class="imagesDescriptions col-md-4">
+            <div class="descContainer"><span class="span1 key">Title :</span> <span class="span1 val">{{indx.title}}</span></div>
+            <div class="descContainer"><span class="span2 key">Owner :</span> <span class="span2 val"> {{indx.owner}}</span></div>
+            <div class="descContainer"><span class="span3 key">Identity : </span> <span class="span3 val">{{indx.id}}</span></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="pagingControl">
+        <div class="text-center">
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/paginationControlPanel.html"></dir-pagination-controls>
+        </div>
+      </div>
+
     </div>
 
 </div>

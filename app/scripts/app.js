@@ -12,4 +12,9 @@ angular
   .module('ibmApp', [
     'ui.router',
     'stacked'
-  ]);
+  ])
+  .run(function(){
+    $('document').ready(function(){
+      $('.spinnerContainer').hide();
+    });
+  });
