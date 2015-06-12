@@ -498,7 +498,7 @@
    */
   function paginationTemplateProvider() {
 
-    var templatePath = 'directives/pagination/paginationControlPanel.html';
+    var templatePath = 'directives/pagination/stacked_paginationControlPanel.html';
 
     this.setPath = function(path) {
       templatePath = path;
