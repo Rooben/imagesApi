@@ -21,9 +21,6 @@ angular.module('stacked', ['angularUtils.directives.dirPagination'])
       }
     });
   })
-  .constant('APIKEY', 'a5e95177da353f58113fd60296e1d250')
-  .constant('USER_ID', '132365033@N08')
-
 
   .controller('StackedCtrl', ['$scope', 'flickr_API', function ($scope, flickr_API) {
     flickr_API.success(function(data){
