@@ -72,8 +72,10 @@ html {
 }
 .spinnerContainer{
   position: absolute;
+  width: 80px;
   top: 30%;
-  left: 40%;
+  left: 50%;
+  margin-left: -40px;
   z-index: 1000;
 }
 
