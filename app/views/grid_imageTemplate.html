@@ -1,0 +1,9 @@
+
+<div ng-click="showLargeImage(img)" class="imageBox" ng-mouseover="hovered(img)" ng-mouseleave="unhovered(img)" data-toggle="modal" href="#myModal1">
+  <div class="imageHint" ng-show="img.mausOut">
+    <span>Name: {{img.title}}</span>  <br/> <span>ID: {{img.id}}</span>
+  </div>
+  <div class="underlay"  ng-show="img.mausOut"></div>
+  <img id="{{img.id}}" class="imageItSelf" src="https://farm{{img.farm}}.staticflickr.com/{{img.server}}/{{img.id}}_{{img.secret}}.jpg" alt="IBM flickr image"/>
+</div>
+
