@@ -8,7 +8,7 @@
           <h3>Page : {{ currentPage }} </h3>
         </div>
         <div class="col-sm-4">
-          <label for="search">Search:</label>
+          <label for="search">Search for an Animal:</label>
           <input ng-model="q" id="search" class="form-control" placeholder="Filter text">
         </div>
         <div class="col-sm-4">
@@ -20,7 +20,7 @@
 
       <div class="pagingControl">
         <div class="text-center">
-          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/paginationControlPanel.html"></dir-pagination-controls>
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/stacked_paginationControlPanel.html"></dir-pagination-controls>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
 
       <div class="pagingControl">
         <div class="text-center">
-          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/paginationControlPanel.html"></dir-pagination-controls>
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="views/stacked_paginationControlPanel.html"></dir-pagination-controls>
         </div>
       </div>
 
